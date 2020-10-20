@@ -18,6 +18,7 @@ function Chat() {
     const channelName = useSelector(selectChannelName);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
+    const Messages = document.getElementById('Messages');
 
     useEffect(()=>{
         if (channelId) {
@@ -39,7 +40,8 @@ function Chat() {
             user: user,
             timestamp : firebase.firestore.FieldValue.serverTimestamp(),
         })
-
+        
+        Messages.scrollTop = Messages.scrollHeight;
         setInput("");
     }
 
@@ -47,7 +49,9 @@ function Chat() {
         <div className = "chat" >
             <ChatHeader channelName = {channelName} />
 
-            <div className = "chat__messages">
+            <div 
+                id = 'Messages' 
+                className = "chat__messages" >
                 {messages.map((message, id) => (
                     <Message 
                         key = {id}
