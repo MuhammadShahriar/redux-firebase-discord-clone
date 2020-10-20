@@ -42,4 +42,27 @@
 
 .chat__messages {
     flex: 1;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* width */
+.chat__messages::-webkit-scrollbar {
+    width: 10px;    
+}
+  
+  /* Track */
+.chat__messages::-webkit-scrollbar-track {
+    background: #544C4A;
+}
+  
+  /* Handle */
+.chat__messages::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+.chat__messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -28,7 +28,7 @@ function Sidebar() {
             })))
         );
 
-    }, [{db, setChannels}]);
+    }, [setChannels]);
 
     const handlAddCannel = () => {
         const channelName = prompt("Enter a new channel name");
@@ -57,7 +57,6 @@ function Sidebar() {
                 </div>
 
                 <div className = "sidebar__channelsList" >
-                    {/* {console.log("Hoi nai")} */}
                     {channels.map(({id, channel}) => (
                         <SidebarChannels
                             key = {id}
@@ -65,15 +64,6 @@ function Sidebar() {
                             channelName = {channel.channelName}
                         />
                     ))}
-                    {/* { channels ? ( channels.map(({id, channel}) => (
-                        <SidebarChannels
-                            key = {id}
-                            id = {id}
-                            channelName = {channel.channelName}
-                        />
-                    )) ) : (
-                        <SidebarChannels />
-                    ) } */}
                 </div>
 
             </div>

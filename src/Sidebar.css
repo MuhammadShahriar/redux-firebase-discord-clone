@@ -97,3 +97,31 @@
     justify-content: space-between;
     cursor: pointer;
 }
+
+
+.sidebar__channels {
+    flex: 1;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+/* width */
+.sidebar__channels::-webkit-scrollbar {
+    width: 10px;    
+}
+  
+  /* Track */
+.sidebar__channels::-webkit-scrollbar-track {
+    background: #544C4A;
+}
+  
+  /* Handle */
+.sidebar__channels::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+.sidebar__channels::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -28,7 +28,7 @@ function App() {
     })
     
     
-  }, [{dispatch, auth}])
+  }, [dispatch])
 
   return (
     <div className="app">

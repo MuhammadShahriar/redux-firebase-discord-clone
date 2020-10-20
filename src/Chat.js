@@ -29,7 +29,7 @@ function Chat() {
                 setMessages(snapshot.docs.map((doc) => doc.data()))
             })
         }
-    }, [{channelId, db, setMessages}])
+    }, [channelId, setMessages])
 
     const sendMessage = (e) => {
         e.preventDefault();
@@ -48,8 +48,9 @@ function Chat() {
             <ChatHeader channelName = {channelName} />
 
             <div className = "chat__messages">
-                {messages.map((message) => (
+                {messages.map((message, id) => (
                     <Message 
+                        key = {id}
                         message = {message.message}
                         user = {message.user}
                         timestamp = {message.timestamp}
